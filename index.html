@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wadi Safar Asset QR Scanner</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- ZXing library (browser QR / barcode reader) -->
+  <script src="https://unpkg.com/@zxing/library@latest/umd/index.min.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Wadi Safar Asset Scanner</h1>
+    <p>Point camera at asset QR code</p>
+
+    <div class="video-container">
+      <video id="video" autoplay playsinline muted></video>
+      <div id="overlay" class="scanner-overlay"></div>
+    </div>
+
+    <div id="result" class="result hidden"></div>
+
+    <button id="restartBtn" class="hidden">Scan again</button>
+  </div>
+
+  <script src="scanner.js"></script>
+</body>
+</html>
